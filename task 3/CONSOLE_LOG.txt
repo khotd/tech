@@ -1,0 +1,15 @@
+=== Старт тестов кеширования ===
+--- Профиль: read-heavy (80% read / 19% write) ---
+[read-heavy] cache_aside: throughput=1399.19 req/s, avg_latency=0.71 ms, db_reads=798, db_writes=1161, cache_hit_rate=84.16%
+[read-heavy] write_through: throughput=1434.07 req/s, avg_latency=0.70 ms, db_reads=695, db_writes=1161, cache_hit_rate=86.21%
+[read-heavy] write_back: throughput=1542.22 req/s, avg_latency=0.62 ms, db_reads=695, db_writes=1104, cache_hit_rate=86.21%, write_back_max_pending=98, flush_count=12
+--- Профиль: balanced (50% read / 50% write) ---
+[balanced] cache_aside: throughput=630.42 req/s, avg_latency=1.59 ms, db_reads=782, db_writes=2983, cache_hit_rate=75.69%
+[balanced] write_through: throughput=660.53 req/s, avg_latency=1.51 ms, db_reads=514, db_writes=2983, cache_hit_rate=84.02%
+[balanced] write_back: throughput=712.27 req/s, avg_latency=1.37 ms, db_reads=514, db_writes=2798, cache_hit_rate=84.02%, write_back_max_pending=98, flush_count=30
+--- Профиль: write-heavy (20% read / 80% write) ---
+[write-heavy] cache_aside: throughput=413.00 req/s, avg_latency=2.42 ms, db_reads=675, db_writes=4816, cache_hit_rate=51.23%
+[write-heavy] write_through: throughput=432.37 req/s, avg_latency=2.31 ms, db_reads=315, db_writes=4816, cache_hit_rate=77.24%
+[write-heavy] write_back: throughput=421.44 req/s, avg_latency=2.36 ms, db_reads=315, db_writes=4540, cache_hit_rate=77.24%, write_back_max_pending=99, flush_count=49
+=== Готово. Отчет сохранен: REPORT.md ===
+=== Логи сохранены: CONSOLE_LOG.txt ===
